@@ -67,7 +67,11 @@ function createUserCard(obj) {
 
   card.classList.add('card');
   cardInfo.classList.add('card-info');
+  userName.classList.add('name');
+  userUsername.classList.add('username');
+
   
+
 
 
   card.appendChild(userImg)
