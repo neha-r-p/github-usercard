@@ -85,6 +85,8 @@ function createUserCard(data) {
   cardInfo.appendChild(userName, userUsername, userLocation, userProfile, userFollowers, userFollowing, userBio);
   userProfile.appendChild(userProfileAddress);
 
+  return card;
+
 }
 
 /* List of LS Instructors Github username's: 
