@@ -60,6 +60,11 @@ function createUserCard(obj) {
   const userLocation = document.createElement('p');
   const userProfile = document.createElement('p');
   const userProfileAddress = document.createElement('a');
+  const userFollowers = document.createElement('p');
+  const userFollowing = document.createElement('p');
+  const userBio = document.createElement('p');
+
+  
 
 }
 
