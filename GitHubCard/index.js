@@ -19,6 +19,7 @@ axios.get(`https://api.github.com/users/neha-r-p`)
            create a new component and add it to the DOM as a child of .cards
 */
 
+
 /* Step 5: Now that you have your own card getting added to the DOM, either 
           follow this link in your browser https://api.github.com/users/<Your github name>/followers 
           , manually find some other users' github handles, or use the list found 
@@ -50,6 +51,11 @@ const followersArray = [];
 </div>
 
 */
+
+function createUserCard(obj) {
+  const card = document.createElement('div');
+  const userImg = document.createElement('img');
+}
 
 /* List of LS Instructors Github username's: 
   tetondan
