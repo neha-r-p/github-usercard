@@ -52,7 +52,7 @@ const followersArray = [];
 
 */
 
-function createUserCard(obj) {
+function createUserCard(data) {
   const card = document.createElement('div');
   const userImg = document.createElement('img');
   const cardInfo = document.createElement('div');
@@ -70,7 +70,9 @@ function createUserCard(obj) {
   userName.classList.add('name');
   userUsername.classList.add('username');
 
-  
+  userImg.src = data.avatar_url;
+  userName.textContent = data.name;
+
 
 
 
