@@ -55,6 +55,12 @@ const followersArray = [];
 function createUserCard(obj) {
   const card = document.createElement('div');
   const userImg = document.createElement('img');
+  const userName = document.createElement('h3');
+  const userUsername = document.createElement('p');
+  const userLocation = document.createElement('p');
+  const userProfile = document.createElement('p');
+  const userProfileAddress = document.createElement('a');
+
 }
 
 /* List of LS Instructors Github username's: 
