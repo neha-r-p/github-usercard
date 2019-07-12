@@ -8,7 +8,9 @@ axios.get(`https://api.github.com/users/neha-r-p`)
   .then(data => {
     console.log(data)
     cards.appendChild(createUserCard(data.data))
-
+  })
+  .catch(err => {
+    console.log('The API is currently down, try again later', err)
   })
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
