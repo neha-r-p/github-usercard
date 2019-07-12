@@ -81,7 +81,7 @@ function createUserCard(data) {
   userFollowing.textContent = `Following: ${data.following}`;
   userBio.textContent = `Bio: ${data.bio}`;
 
-  card.appendChild(userImg cardInfo);
+  card.appendChild(userImg, cardInfo);
   cardInfo.appendChild(userName, userUsername, userLocation, userProfile, userFollowers, userFollowing, userBio);
   userProfile.appendChild(userProfileAddress);
 
