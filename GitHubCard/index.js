@@ -2,6 +2,17 @@
            (replacing the palceholder with your Github name):
            https://api.github.com/users/<your name>
 */
+
+/* Step 2: Inspect and study the data coming back, this is YOUR 
+   github info! You will need to understand the structure of this 
+   data in order to use it to build your component function 
+
+   Skip to Step 3.
+*/
+/* Step 4: Pass the data received from Github into your function, 
+           create a new component and add it to the DOM as a child of .cards
+*/
+
 const cards = document.querySelector('.cards');
 
 axios.get(`https://api.github.com/users/neha-r-p`)
@@ -12,17 +23,6 @@ axios.get(`https://api.github.com/users/neha-r-p`)
   .catch(err => {
     console.log('The API is currently down, try again later', err)
   })
-
-/* Step 2: Inspect and study the data coming back, this is YOUR 
-   github info! You will need to understand the structure of this 
-   data in order to use it to build your component function 
-
-   Skip to Step 3.
-*/
-
-/* Step 4: Pass the data received from Github into your function, 
-           create a new component and add it to the DOM as a child of .cards
-*/
 
 
 /* Step 5: Now that you have your own card getting added to the DOM, either 
@@ -35,7 +35,17 @@ axios.get(`https://api.github.com/users/neha-r-p`)
           user, and adding that card to the DOM.
 */
 
-const followersArray = [];
+const followersArray = ['guswynn', 'nihalpd', 'erostribe', 'lilyhoratio', 'workingjubilee'];
+
+followersArray.forEach(follower => {
+  axios.get(`https://api.github.com/users/${follower}`)
+  .then(data =>{
+    cards.appendChild(createUserCard(data.data));
+  })
+  .catch(err => {
+    console.log('The API is currently down, try again later', err)
+  })
+})
 
 /* Step 3: Create a function that accepts a single object as its only argument,
           Using DOM methods and properties, create a component that will return the following DOM element:
