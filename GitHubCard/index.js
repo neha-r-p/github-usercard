@@ -72,6 +72,11 @@ function createUserCard(data) {
 
   userImg.src = data.avatar_url;
   userName.textContent = data.name;
+  userUsername.textContent = data.login;
+  userLocation.textContent = `Location: ${data.location}`;
+  userProfile.textContent = `Profile:`;
+  userProfileAddress.href = data.url;
+  userProfileAddress.textContent = data.url;
 
 
 
