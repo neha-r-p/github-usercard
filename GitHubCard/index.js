@@ -77,6 +77,9 @@ function createUserCard(data) {
   userProfile.textContent = `Profile:`;
   userProfileAddress.href = data.url;
   userProfileAddress.textContent = data.url;
+  userFollowers.textContent = `Followers: ${data.followers}`;
+  userFollowing.textContent = `Following: ${data.following}`;
+  userBio.textContent = `Bio: ${data.bio}`;
 
 
 
