@@ -2,10 +2,13 @@
            (replacing the palceholder with your Github name):
            https://api.github.com/users/<your name>
 */
+const cards = document.querySelector('.cards');
 
 axios.get(`https://api.github.com/users/neha-r-p`)
   .then(data => {
     console.log(data)
+    cards.appendChild(createUserCard(data.data))
+
   })
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
@@ -74,7 +77,7 @@ function createUserCard(data) {
   userName.textContent = data.name;
   userUsername.textContent = data.login;
   userLocation.textContent = `Location: ${data.location}`;
-  userProfile.textContent = `Profile:`;
+  userProfile.textContent = `Profile: `;
   userProfileAddress.href = data.url;
   userProfileAddress.textContent = data.url;
   userFollowers.textContent = `Followers: ${data.followers}`;
